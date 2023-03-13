@@ -1,0 +1,9 @@
+on:
+  push: [master]
+
+jobs:
+  test:
+    environment: test
+    runs-on: ubuntu-latest
+    steps: 
+      - run: echo test
