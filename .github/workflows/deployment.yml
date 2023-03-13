@@ -5,4 +5,4 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps: 
-      - run: echo ${{ github.event.deployment.status }}
+      - run: echo ${{ github.event.deployment.deployment.state }} ${{ github.event.deployment.state }}

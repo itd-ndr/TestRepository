@@ -7,4 +7,4 @@ jobs:
     environment: test
     runs-on: ubuntu-latest
     steps: 
-      - run: echo test
+      - run: sleep 100
