@@ -17,5 +17,5 @@ jobs:
           poll-interval-seconds: 10
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - run: echo "Job serial execution start $(date)"
-      - run: "sleep ${{ format('{}', inputs.delay) }}"
+      - run: "sleep ${{ format('{0}', inputs.delay) }}"
       - run: echo "Job serial execution finish $(date)"
