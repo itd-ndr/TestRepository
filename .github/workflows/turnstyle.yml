@@ -1,5 +1,5 @@
 name: Turnstyle
-run-name: Sleep ${{ format('{0}', inputs.delay) }}
+run-name: Test - Sleep ${{ format('{0}', inputs.delay) }}
 on:
   workflow_dispatch:
     inputs:
@@ -12,7 +12,7 @@ jobs:
     steps:
       - run: echo "Job start $(date)"
       - name: Turnstyle
-        uses: meisterplan/action-turnstyle@v2
+        uses: softprops/turnstyle@8db075d65b19bf94e6e8687b504db69938dc3c65
         with:
           abort-after-seconds: 600
           poll-interval-seconds: 10
