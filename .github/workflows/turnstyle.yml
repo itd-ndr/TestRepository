@@ -11,7 +11,7 @@ jobs:
     steps:
       - run: echo "Job start $(date)"
       - name: Turnstyle
-      - uses: meisterplan/action-turnstyle@v2
+        uses: meisterplan/action-turnstyle@v2
         with:
           abort-after-seconds: 600
           poll-interval-seconds: 10
