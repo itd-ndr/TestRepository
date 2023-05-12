@@ -1,4 +1,5 @@
 name: Turnstyle
+run-name: Sleep ${{ format('{0}', inputs.delay) }}
 on:
   workflow_dispatch:
     inputs:
