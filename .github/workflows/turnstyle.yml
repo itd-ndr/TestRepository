@@ -1,5 +1,5 @@
 name: Turnstyle
-run-name: Test 2 - Sleep ${{ format('{0}', inputs.delay) }}
+run-name: Test 3 - Sleep ${{ format('{0}', inputs.delay) }}
 on:
   workflow_dispatch:
     inputs:
@@ -12,12 +12,11 @@ jobs:
     steps:
       - run: echo "Job start $(date)"
       - name: Turnstyle
-        uses: softprops/turnstyle@ca99add00ff0c9cbc697d22631d2992f377e5bd5
+        uses: meisterplan/action-turnstyle@31730aa7d2d985df3bfa6d37808bf25aed6d69e8
         with:
           abort-after-seconds: 600
-          poll-interval-seconds: 10
-        env: 
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          poll-interval-seconds: 10 
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       - run: echo "Job serial execution start $(date)"
       - run: "sleep ${{ format('{0}', inputs.delay) }}"
       - run: echo "Job serial execution finish $(date)"
